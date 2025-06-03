@@ -8,8 +8,11 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v3 #uses defines predefined github actions #checks out our repo to the container ubuntu machine runner 
+    - uses: actions/checkout@v3 
+## uses defines predefined github actions 
+## checks out our repo to the container ubuntu machine runner. ls'li bi task yaratsan repoyu gorursun
     - name: docker pull
       run: |
         docker pull harchoumi/todolist
-
+    - name: run ls
+      run: ls
