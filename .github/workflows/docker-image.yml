@@ -17,9 +17,6 @@ jobs:
     - name: run ls
       run: ls
 
-    - name: Connect to docker repo
-      run: docker login -u $DOCKER_USERNAME $DOCKER_PASSWORD
-
     - name: docker login
       env:
         DOCKER_USER: ${{secrets.DOCKER_USERNAME}}
