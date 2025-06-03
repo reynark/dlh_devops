@@ -6,6 +6,7 @@ Alistirmalardan biri:
 On GitHub, create your workflow file.
 
 Create a folder in your Angular repo: `.github/workflows`
+Creating the .github/workflows directory in your repo tells GitHub where to look for GitHub Actions workflow files.
 
 In this folder, create your actions file: `docker-image.yml`
 
