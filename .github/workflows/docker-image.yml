@@ -1,3 +1,5 @@
+#take an angular app, build it, put it in a container and push it to docker repo
+
 name: Docker Image CI
 on:
   push:
@@ -33,7 +35,7 @@ jobs:
 
     - name: Docker push
       run: |
-        docker push $DOCKER_USER/todolist:latest
+        docker push $DOCKER_USER/beledangulari:latest
 
 
     - name: Docker logout
