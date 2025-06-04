@@ -6,6 +6,7 @@ Alistirmalardan biri:
 On GitHub, create your workflow file.
 
 Create a folder at the root of the repo: `.github/workflows`  ## bu folder'i yaratinca actions kismi aciliyo
+
 Creating the .github/workflows directory in your repo tells GitHub where to look for GitHub Actions workflow files.
 
 In this folder, create your actions file: `docker-image.yml`
