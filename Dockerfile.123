@@ -8,5 +8,5 @@ COPY angular-todo/ /app
 RUN npm run build --prod
 
 # Stage 2
-FROM nginx:1.17.1-alpine
+FROM nginx:1.17.1-alpine as execution-step
 COPY --from=build-step /app/dist /usr/share/nginx/html

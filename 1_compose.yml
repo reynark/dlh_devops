@@ -1,0 +1,6 @@
+#this builds and runs todo thing based on the Dockerfile inside the apps folder
+services:
+  todo_app:
+    build: ./angular-todo
+    ports:
+      - "8080:80"
