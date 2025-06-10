@@ -1,5 +1,6 @@
 # dlh_devops
 
+-- .workflows oldugu icin biraz gitops_stuff'a da yakin
 
 Alistirmalardan biri:
 
