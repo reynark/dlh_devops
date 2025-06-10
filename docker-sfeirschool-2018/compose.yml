@@ -1,0 +1,45 @@
+# front:3000 > back:9000 > db:5984
+# back ve db: db network
+# back ve front front network
+# curl localhost:3000 / localhost:9000 initiates writes to db:5984
+# DNS alias added to couchdb for testing
+
+version: "3.9"
+services:
+  front:
+    build: ./front
+    container_name: app_front_test
+    networks:
+    - frontend-network
+    ports:
+    - "3000:3000"
+    depends_on:
+      - back
+  db:
+    image: couchdb:2.3
+    container_name: db_test
+    networks:
+      db-network:
+        aliases:
+          - couchdb
+    ports:
+    - "5984:5984"
+    volumes:
+      - db_vol:/opt/couchdb/data
+  back:
+    build: ./back
+    container_name: app_back_test
+    networks:
+    - frontend-network
+    - db-network
+    ports:
+    - "9000:9000"
+    depends_on:
+      - db
+
+networks:
+   frontend-network:
+   db-network:
+
+volumes:
+  db_vol:
